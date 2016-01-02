@@ -1,0 +1,100 @@
+<script src="/javascript/filterDrinks.js">
+</script>
+
+
+<div class="top">
+	<h1>Drinks Page</h1>
+	 <p>Logged in as {{username}} 
+      (<a id="logout" href="/logout" val>Logout</a>)</p>
+</div>
+
+<div class="leftBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	
+	
+</div>
+
+<div class='outterContainer'>
+	<div class="topCont">
+		<form method="POST" action="/drinks/{{username}}/add-drink">
+			
+			
+			<input type="hidden" name="fromExtraDetails" value="false">
+			<input type="hidden" id="username" name="username" value={{username}}>
+
+
+
+			
+			
+				<div id="buttonsSimple">
+					<input type="submit" class='simpleBtn' id='beerBtn' name="drinkName" value="beer">
+					<input type="submit" class='simpleBtn' id='wineBtn' name="drinkName" value="wine">
+					<input type="submit" id='shotBtn' name="drinkName" value="shot">
+					<input id="extra-details" type="checkbox" name="extraDetails"> Extra Details
+				</div>
+				<div id="filter">
+					<select id="typeChooser">
+						<option value="default"></option>
+						<option value="Beer">Beer</option>
+					 	<option value="Wine">Wine</option>
+				 		<option value="Shot">Shot</option>
+					</select>
+					<input type="submit" id="filterButton" name="filter" value="filter">
+				</div>
+
+				<br>
+				
+		</form>
+	</div>
+	<div class="midCont">
+		
+	
+		<table>
+			<thead>
+				<th>Type</th>
+				<th>Brand</th>
+				<th>Quantity</th>
+			</thead>
+			<tbody id="all-drinks">
+				{{#each drinks}}
+				<tr>
+					<td>{{this.type}}</td> 
+					<td>{{this.brand}}</td> 
+					<td>{{this.quantity}}</td> 
+				</tr>
+				{{/each}}
+			</tbody>
+			<tfoot>
+			    <tr>
+			    	<td></td>
+			      	<td><b>TOTAL DRINKS</b></td>
+			      	<td>{{totalDrinks}}</td>
+			    </tr>
+		  	</tfoot>
+		</table>
+	</div>
+	<div class="bottomCont">
+		<form method="POST" onSubmit="return validHoursMinutes()" action="/drinks/{{username}}/sessions">
+			Hours <input id="hrForm" type="text" name="hours" style="width: 30px">
+			Minutes <input id="minForm" type="text" name="minutes" style="width: 30px">
+			<input type="submit" name="createSession" value="Create New Session">
+		</form>
+	</div>
+	
+</div>
+<div class="rightBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	
+
+</div>
+<div class="bottom">
+	
+</div>

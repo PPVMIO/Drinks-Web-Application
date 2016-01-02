@@ -1,0 +1,32 @@
+<div class="top">
+	<h1>History</h1>
+	 <p>Logged in as {{username}} 
+      (<a id="logout" href="/logout" val>Logout</a>)</p>
+</div>
+<div class="leftBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+</div>
+<div class='outterContainer'>
+	{{#each sessions}}
+		<ul>
+	   		On {{this.date}}, after drinking for {{this.period}} minutes, {{this.username}} had 
+	   		{{this.numberOfDrinks}} drinks totaling to {{this.totalUnits}} units of alcohol.
+	   	</ul>
+	{{/each}}
+
+	<a id="newSess" href='/drinks/{{username}}'>New Session</a>
+</div>
+<div class="rightBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	
+
+</div>
+

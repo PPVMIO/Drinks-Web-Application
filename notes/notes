@@ -1,0 +1,17 @@
+PORT=10460 bin/www
+i6.cims.nyu.edu:10460
+
+mongoPort=10461
+
+http://www.ranker.com/list/top-beers-from-united-states/reference?format=GRID
+
+http://thechive.com/2015/01/18/the-most-popular-craft-beers-from-each-state/
+
+http://www.huffingtonpost.com/2015/03/04/popular-beers-in-america-_n_6787494.html
+
+http://draftmag.com/science-session-abv-processing/
+
+mongoose.connect('mongodb://localhost/drinksdb');
+
+https://code.google.com/p/selenium/wiki/WebDriverJs
+

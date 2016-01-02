@@ -1,0 +1,80 @@
+<div class="top"><h1>Extra Details Page</h1></div>
+<div class="leftBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+	
+	
+	
+</div>
+<div class='outterContainer'>
+	<form method="POST" onSubmit="return validateDetails()" action="/drinks/{{username}}/add-drink/detailed/{{drinkType}}">
+		{{#if isBeer}}
+			Brand <select id='beerChoice' name="brand">
+				<option value="default"></option>
+			    <option id="testValue" value="60 Minute IPA">60 Minute IPA</option>
+			    <option value="90 Minute IPA">90 Minute IPA</option>
+			    <option value="120 Minute IPA">120 Minute IPA</option>
+			    <option value="420 Extra Pale Ale">420 Extra Pale Ale</option>
+			    <option value="Alaskan Amber">Alaskan Amber</optin>
+			    <option value="Alpha King">Alpha King</option>
+			    <option value="Anchor Steam">Anchor Steam</option>
+			    <option value="Bare Knuckle Stout">Bare Knuckle Stout</option>
+				<option value="Big Cottonwood">Big Cottonwood</option>
+				<option value="Breakfast Stout">Breakfast Stout</option>
+			    <option value="Brooklyn Lager">Brooklyn Lager</option>
+			    <option value="Bud Ice">Bud Ice</option>
+			    <option value="Bud Light">Bud Light</option>
+			    <option value="Bud Light Lime">Bud Light Lime</option>
+			    <option value="Bud Light Platinum">Bud Light Platinum</option>
+			    <option value="Budweiser">Budweiser</option>
+			    <option value="Busch">Busch</option>
+			    <option value="Coffee Oatmeal Stout">Coffee Oatmeal Stout</option>
+			    <option value="Colt 45">Colt 45</option>
+			    <option value="Coors Banquet">Coors Banquet</option>
+			    <option value="Coors Light">Coors Light</option>
+			    <option value="Corona Extra">Corona Extra</option>
+			    <option value="Fat Tire">Fat Tire</option>
+			    <option value="Keystone Ice"> Keystone Ice</option>
+			    <option value="Keystone Premium"> Keystone Premium</option>
+			    <option value="Longboard Island Lager">Longboard Island Lager</option>
+			    <option value="Michelob">Michelob</option>
+			    <option value="Miller Genuine Draft">Miller Genuine Draft</option>
+			    <option value="Miller High Life">Miller High Life</option>
+			    <option value="Miller Lite">Miller Lite</option>
+			    <option value="Modelo Especial">Modelo Especial</option>
+				<option value="Moose Drool">Moose Drool</option>
+				<option value="Narragansett Lager">Narragansett Lager</option>
+			    <option value="Natural Ice">Natural Ice</option>
+			    <option value="O'Doul's Amber NA">O'Doul's Amber NA</option>
+				<option value="Pastime Pale Ale">Pastime Pale Ale</option>
+				<option value="The Public">The Public</option>
+			    <option value="Samuel Adams Boston Ale">Samuel Adams Boston Ale</option>
+			    <option value="Samuel Adams Boston Lager">Samuel Adams Boston Lager</option>
+			    <option value="Samuel Adams Cherry Wheat Beer">Samuel Adams Cherry Wheat Beer</option>
+			    <option value="Samuel Adams Cranberry Lambic">Samuel Adams Cranberry Lambic</option>
+			    <option value="Samuel Adams Cream Stout">Samuel Adams Cream Stout</option>
+			    <option value="Samuel Adams Millennium">Samuel Adams Millennium</option>
+			    <option value="Samuel Adams Octoberfest">Samuel Adams Octoberfest</option>
+			    <option value="Samuel Adams Triple Bock">Samuel Adams Triple Bock</option>
+			    <option value="Samuel Adams White Ale">Samuel Adams White Ale</option>
+				<option value="Shiner Bock">Shiner Bock</option>
+				<option value="Spotted Cow">Spotted Cow</option>
+				<option value="Yuengling Traditional Lager">Yuengling Traditional Lager</option>
+			</select>
+		<br>
+		{{else}}
+			Brand <input type="text" id='regBrand' name="brand" >
+			<br>
+			AbV <input type="text" id='abvfield' name="abv">
+		{{/if}}
+		<br>
+		
+		No of Drinks <input id="numDrinks" type="text" name="drinks">
+		<input type="hidden" name="fromExtraDetails" value="true">
+
+<br>
+		<input type="submit" id="addDet" value="Add Details">
+	</form>
+</div>
+<div class="rightBuffer">
+	<img src="/img/mainPageDrinks.jpg" alt="picture">
+</div>
